@@ -1,0 +1,14 @@
+{
+  "name": "7layers-bakery-website",
+  "version": "7.0.0",
+  "private": true,
+  "description": "7Layers Bakery customer ordering site and admin dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemailer": "^7.0.5"
+  }
+}

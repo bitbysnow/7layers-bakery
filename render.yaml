@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: 7layers-bakery
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: ADMIN_USER
+        sync: false
+      - key: ADMIN_PASS
+        sync: false
+      - key: DATA_DIR
+        value: /var/data
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: BAKERY_EMAIL
+        sync: false
+    disk:
+      name: 7layers-orders
+      mountPath: /var/data
+      sizeGB: 1
