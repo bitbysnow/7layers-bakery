@@ -1,4 +1,4 @@
-# 7Layers Bakery & Snacks — V5
+# 7Layers Bakery & Snacks 
 
 ## What V5 includes
 - Premium responsive customer website
