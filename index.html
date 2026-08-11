@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="7Layers Bakery & Snacks — cakes, pastries, puffs, burgers, pizza, shawarma and more in Hyderabad.">
+  <title>7Layers Bakery | Cakes, Pastries & Sweet Moments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="7Layers home">
+      <span class="logo-mark">7</span>
+      <span>Layers</span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-order" href="#contact">Order a Cake</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">BAKED WITH LOVE • SERVED WITH JOY</p>
+        <h1>Sweet moments,<br><em>layer by layer.</em></h1>
+        <p class="hero-text">Freshly baked cakes, pastries and desserts made to make your celebrations a little more special.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#menu">Explore Our Menu <span>→</span></a>
+          <a class="btn btn-ghost" href="#contact">Order a Cake</a>
+        </div>
+      </div>
+      <div class="hero-art real-hero" aria-label="7Layers bakery interior">
+        <img src="images/interior.jpg" alt="Inside 7Layers Bakery" class="hero-photo">
+        <div class="hero-badge"><strong>7LAYERS</strong><span>BAKERY & SNACKS</span></div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div>
+        <p class="eyebrow">OUR SPECIALITY</p>
+        <h2>Made for cravings.<br>Designed for celebrations.</h2>
+      </div>
+      <p>From a simple evening treat to a birthday centerpiece, 7Layers brings together beautiful presentation and delicious, freshly made bakes.</p>
+    </section>
+
+    
+<section class="full-menu" id="menu">
+  <div class="section-head centered">
+    <p class="eyebrow">7LAYERS MENU</p>
+    <h2>Good food. Great layers.</h2>
+    <p>Fresh bakery favourites, snacks, meals and celebration cakes.</p>
+  </div>
+
+  <div class="order-bar">
+      <div><strong>Your order</strong><span id="cartSummary">0 items • ₹0</span></div>
+      <button class="btn btn-primary" id="viewCartBtn" type="button">View Order</button>
+    </div>
+    <div class="menu-tools">
+    <input id="menuSearch" type="search" placeholder="Search the menu..." aria-label="Search menu">
+    <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+      <button class="menu-tab active" data-filter="all">All</button>
+      <button class="menu-tab" data-filter="puff">Puff</button>
+      <button class="menu-tab" data-filter="burgers">Burgers & Fries</button>
+      <button class="menu-tab" data-filter="pizza">Pizza</button>
+      <button class="menu-tab" data-filter="shawarma">Shawarma</button>
+      <button class="menu-tab" data-filter="rolls">Rolls</button>
+      <button class="menu-tab" data-filter="chinese">Chinese</button>
+      <button class="menu-tab" data-filter="bakery">Bakery</button>
+      <button class="menu-tab" data-filter="cakes">Cakes & Pastries</button>
+      <button class="menu-tab" data-filter="biscuits">Biscuits</button>
+      <button class="menu-tab" data-filter="starters">Starters</button>
+      <button class="menu-tab" data-filter="sandwich">Sandwich</button>
+    </div>
+  </div>
+
+  <div class="menu-groups">
+
+    <section class="menu-group" data-category="puff">
+      <h3>Puff</h3>
+      <div class="menu-items">
+        <article class="menu-item"><div><h4>Egg Puff <small>Pack Of 3</small></h4><p>Seasoned egg wrapped in a crisp, golden pastry.</p></div><div class="menu-price"><strong>₹119</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Veg Puff <small>Pack Of 3</small></h4><p>Golden flaky pastry filled with a flavorful mixed-vegetable filling.</p></div><div class="menu-price"><strong>₹119</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken Puff <small>Pack Of 3</small></h4><p>Seasoned chicken wrapped in a crisp, golden-brown pastry.</p></div><div class="menu-price"><strong>₹149</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+    </section>
+
+    <section class="menu-group" data-category="burgers">
+      <h3>Burgers & French Fries</h3>
+      <h5>Burgers</h5>
+      <div class="menu-items">
+        <article class="menu-item"><div><h4>Chicken Classic Burger</h4><p>Chicken patty with lettuce, tomato, onion and toppings.</p></div><div class="menu-price"><strong>₹139</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken 65 Burger</h4><p>Crispy, spicy Chicken 65 patty with fresh toppings.</p></div><div class="menu-price"><strong>₹159</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Veg Burger</h4><p>A tasty plant-based burger with fresh toppings.</p></div><div class="menu-price"><strong>₹119</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+      <h5>French Fries</h5>
+      <div class="menu-items">
+        <article class="menu-item veg"><div><h4>Masala French Fries</h4></div><div class="menu-price"><strong>₹119</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Peri Peri French Fries</h4></div><div class="menu-price"><strong>₹139</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Salted French Fries</h4></div><div class="menu-price"><strong>₹99</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+    </section>
+
+    <section class="menu-group" data-category="pizza">
+      <h3>Pizza</h3>
+      <div class="menu-items">
+        <article class="menu-item"><div><h4>Chicken Pizza <small>8 Inches</small></h4></div><div class="menu-price"><strong>₹259</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken 65 Pizza <small>8 Inches</small></h4><p>Chicken 65, fiery spices, tangy sauce, gooey cheese and crispy crust.</p></div><div class="menu-price"><strong>₹279</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Veg Pizza <small>8 Inches</small></h4><p>Crispy crust, sauce, gooey cheese and fresh vegetables.</p></div><div class="menu-price"><strong>₹249</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+    </section>
+
+    <section class="menu-group" data-category="shawarma">
+      <h3>Shawarma</h3>
+      <div class="menu-items">
+        <article class="menu-item"><div><h4>Shawarma</h4></div><div class="menu-price"><strong>₹139</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Shawarma Special</h4></div><div class="menu-price"><strong>₹159</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+    </section>
+
+    <section class="menu-group" data-category="rolls">
+      <h3>Rolls</h3>
+      <div class="menu-items">
+        <article class="menu-item"><div><h4>Chicken 65 Rumali Roll</h4></div><div class="menu-price"><strong>₹159</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken Rumali Roll</h4></div><div class="menu-price"><strong>₹139</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken Samoli Roll</h4><p>Rolled flatbread filled with seasoned chicken, vegetables and sauces.</p></div><div class="menu-price"><strong>₹139</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken 65 Samoli Roll</h4><p>Spicy Chicken 65, fresh vegetables and sauces in flatbread.</p></div><div class="menu-price"><strong>₹159</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Veg Samoli Roll</h4><p>Flaky pastry-style roll filled with spiced vegetables.</p></div><div class="menu-price"><strong>₹119</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+    </section>
+
+    <section class="menu-group" data-category="chinese">
+      <h3>Chinese</h3>
+      <h5>Noodles</h5>
+      <div class="menu-items">
+        <article class="menu-item"><div><h4>Chicken Manchuriya Noodles</h4></div><div class="menu-price"><strong>₹179</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken Mix Noodles</h4></div><div class="menu-price"><strong>₹199</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken Noodles</h4></div><div class="menu-price"><strong>₹159</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken Shezwan Noodles</h4></div><div class="menu-price"><strong>₹179</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Egg Noodles</h4></div><div class="menu-price"><strong>₹149</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Manchuriya Noodles</h4></div><div class="menu-price"><strong>₹149</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Veg Noodles</h4></div><div class="menu-price"><strong>₹139</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Veg Shezwan Noodles</h4></div><div class="menu-price"><strong>₹149</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+      <h5>Fried Rice</h5>
+      <div class="menu-items">
+        <article class="menu-item"><div><h4>Chicken Fried Rice</h4></div><div class="menu-price"><strong>₹159</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken Manchuriya Fried Rice</h4></div><div class="menu-price"><strong>₹179</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken Mix Fried Rice</h4></div><div class="menu-price"><strong>₹199</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken Shezwan Fried Rice</h4></div><div class="menu-price"><strong>₹179</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Egg Fried Rice</h4></div><div class="menu-price"><strong>₹149</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Veg Fried Rice</h4></div><div class="menu-price"><strong>₹139</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Veg Mnchuriya Fried Rice</h4></div><div class="menu-price"><strong>₹149</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Veg Shezwan Fried Rice</h4></div><div class="menu-price"><strong>₹149</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+      <h5>Manchuriya</h5>
+      <div class="menu-items">
+        <article class="menu-item"><div><h4>Chicken Manchuriya</h4></div><div class="menu-price"><strong>₹269</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken Manchuriya Gravy</h4></div><div class="menu-price"><strong>₹279</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Veg Manchuriya</h4></div><div class="menu-price"><strong>₹139</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+    </section>
+
+    <section class="menu-group" data-category="bakery">
+      <h3>Bakery Items</h3>
+      <div class="menu-items">
+        <article class="menu-item veg"><div><h4>Dilkhush</h4><p>Soft cream cake topped with tutti frutti and coconut.</p></div><div class="menu-price"><strong>₹29</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Cream Bun</h4><p>Soft bun stuffed with sweet, creamy filling.</p></div><div class="menu-price"><strong>₹29</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Dilpasand</h4><p>Soft sponge layered with sweet cream and fruity filling, topped with tutti frutti and coconut.</p></div><div class="menu-price"><strong>₹29</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Bread</h4></div><div class="menu-price"><strong>₹59</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Shirmal</h4></div><div class="menu-price"><strong>₹29</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Fine</h4></div><div class="menu-price"><strong>₹19</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Plain Toast <small>250 Grams</small></h4></div><div class="menu-price"><strong>₹69</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Fruit Toast <small>250 Grams</small></h4></div><div class="menu-price"><strong>₹69</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Small Bun</h4></div><div class="menu-price"><strong>₹17</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+    </section>
+
+    <section class="menu-group" data-category="cakes">
+      <h3>Cakes & Pastries</h3>
+      <h5>Pastries</h5>
+      <div class="menu-items">
+        <article class="menu-item veg"><div><h4>Pineapple Pastry</h4><p>Moist cake layers with tangy pineapple flavour and creamy topping.</p></div><div class="menu-price"><strong>₹39</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Butterscotch Pastry</h4><p>Rich cake layers with classic butterscotch flavour.</p></div><div class="menu-price"><strong>₹49</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Strawberry Pastry</h4><p>Vanilla sponge with strawberry cream and glaze.</p></div><div class="menu-price"><strong>₹44</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Black Forest Pastry</h4><p>Chocolate cake, whipped cream and cherries.</p></div><div class="menu-price"><strong>₹69</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Chocolate Pastry</h4><p>Chocolate sponge, rich chocolate cream and glaze.</p></div><div class="menu-price"><strong>₹79</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+      <h5>Cakes</h5>
+      <div class="menu-items">
+        <article class="menu-item veg"><div><h4>Pineapple Cake</h4><p>Refreshing pineapple cake with creamy frosting.</p></div><div class="menu-price"><strong>₹299</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Butterscotch Cake</h4><p>Decadent cake with butterscotch flavour and frosting.</p></div><div class="menu-price"><strong>₹399</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Strawberry Cake</h4><p>Vanilla sponge with smooth strawberry cream and topping.</p></div><div class="menu-price"><strong>₹349</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Black Forest Cake</h4><p>Chocolate sponge with cherries, whipped cream and chocolate shavings.</p></div><div class="menu-price"><strong>₹499</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Chocolate Chocochips Cake</h4><p>Chocolate sponge layered with rich chocolate cream and choco chips.</p></div><div class="menu-price"><strong>₹549</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+    </section>
+
+    <section class="menu-group" data-category="biscuits">
+      <h3>Biscuits</h3>
+      <div class="menu-items">
+        <article class="menu-item veg"><div><h4>Salt Biscuit</h4><p>Crispy, savoury biscuits with a satisfying crunch.</p></div><div class="menu-price"><strong>₹129</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>7 Layer Osmania Biscuit</h4><p>Traditional Hyderabad-style buttery biscuit with a delicate saffron note.</p></div><div class="menu-price"><strong>₹139</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Moon Biscuit</h4><p>Golden, buttery biscuits with a flaky and tender texture.</p></div><div class="menu-price"><strong>₹139</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Fruit Biscuit</h4><p>Buttery biscuits with dried fruit for a sweet, fruity bite.</p></div><div class="menu-price"><strong>₹149</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Coconut Microm</h4><p>Coconut and cherry macaroon-style biscuits with a satisfying crunch.</p></div><div class="menu-price"><strong>₹149</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+    </section>
+
+    <section class="menu-group" data-category="starters">
+      <h3>Starters</h3>
+      <div class="menu-items">
+        <article class="menu-item"><div><h4>Chicken 65 Dry</h4><p>Spicy, tangy South Indian-style fried chicken bites.</p></div><div class="menu-price"><strong>₹269</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken 65 Gravy</h4></div><div class="menu-price"><strong>₹279</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chilli Chicken</h4></div><div class="menu-price"><strong>₹279</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Fried Leg Piece</h4></div><div class="menu-price"><strong>₹239</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Fried Wings</h4></div><div class="menu-price"><strong>₹239</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+    </section>
+
+    <section class="menu-group" data-category="sandwich">
+      <h3>Sandwich</h3>
+      <div class="menu-items">
+        <article class="menu-item"><div><h4>Chicken 65 Grilled Sandwich</h4><p>Chicken 65, fresh vegetables and seasonings on toasted bread.</p></div><div class="menu-price"><strong>₹159</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item"><div><h4>Chicken Grilled Sandwich</h4><p>Tender chicken, fresh vegetables and seasonings on toasted bread.</p></div><div class="menu-price"><strong>₹139</strong><button class="add-btn" type="button">+ Add</button></div></article>
+        <article class="menu-item veg"><div><h4>Veg Grilled Sandwich</h4><p>Fresh vegetables, seasonings and melted cheese on toasted bread.</p></div><div class="menu-price"><strong>₹119</strong><button class="add-btn" type="button">+ Add</button></div></article>
+      </div>
+    </section>
+
+  </div>
+  <p class="menu-note">Prices shown are the menu prices provided for the website. Please confirm final prices with 7Layers before publishing.</p>
+</section>
+
+<section class="storefront-strip">
+      <img src="images/storefront.jpg" alt="7Layers Bakery storefront">
+      <div><p class="eyebrow">VISIT 7LAYERS</p><h2>A place for cakes, snacks & good moments.</h2></div>
+    </section>
+
+    <section class="story" id="about">
+      <div class="story-image">
+        <div class="story-card"><span>7</span><small>layers of<br>happiness</small></div>
+      </div>
+      <div class="story-content">
+        <p class="eyebrow">OUR STORY</p>
+        <h2>A little sweetness goes a long way.</h2>
+        <p>7Layers is a modern bakery concept built around one simple idea: every bite should feel special. We combine carefully chosen ingredients, thoughtful flavours and a love for beautiful cakes.</p>
+        <p>Whether you're celebrating a birthday, anniversary or simply treating yourself, we're here to make the moment sweeter.</p>
+        <a class="text-link" href="#contact">Talk to us about your cake <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="section-heading centered">
+        <p class="eyebrow">A FEW SWEET MOMENTS</p>
+        <h2>Made to be shared.</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item g1"><img src="images/dining.jpg" alt="7Layers bakery seating area"><span>Come in & enjoy</span></div>
+        <div class="gallery-item g2"><img src="images/red-cake.jpg" alt="Red chocolate celebration cake"><span>Signature cakes</span></div>
+        <div class="gallery-item g3"><img src="images/princess-cake.jpg" alt="Princess themed cake"><span>Custom designs</span></div>
+        <div class="gallery-item g4"><img src="images/blue-cake.jpg" alt="Blue themed celebration cake"><span>Made for celebrations</span></div>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div>
+        <p class="eyebrow">FIND US</p>
+        <h2>Visit 7Layers Bakery & Snacks</h2>
+        <p>Amberpet Main Rd, Hayathnagar, Bapu Nagar, Amberpet, Hyderabad, Telangana 500013</p>
+      </div>
+      <a class="btn btn-primary" href="https://maps.app.goo.gl/mavDJb9yjTDQEsRH8" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+    </section>
+
+    <section class="cta" id="contact">
+      <div>
+        <p class="eyebrow">LET'S MAKE IT SWEET</p>
+        <h2>Planning a celebration?</h2>
+        <p>Tell us what you're dreaming of and we'll help turn it into a cake.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-light" href="https://wa.me/919030333177" target="_blank" rel="noopener">WhatsApp Us ↗</a>
+        <a class="btn btn-outline-light" href="tel:+919030333177">Call Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div>
+        <a class="logo footer-logo" href="#home"><span class="logo-mark">7</span><span>Layers</span></a>
+        <p>Handcrafted cakes & sweet moments.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <span>7Layers Bakery & Snacks</span>
+        <span>Hyderabad, Telangana</span>
+      </div>
+    </div>
+    <div class="copyright">© 2026 7Layers Bakery. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+
+<div class="cart-modal" id="cartModal" aria-hidden="true">
+  <div class="cart-backdrop" data-close-cart></div>
+  <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <button class="cart-close" type="button" data-close-cart aria-label="Close">×</button>
+    <p class="eyebrow">YOUR ORDER</p>
+    <h2 id="cartTitle">Order from 7Layers</h2>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+
+    <form id="orderForm" class="order-form">
+      <label>Name<input id="customerName" required placeholder="Your name"></label>
+      <label>Phone<input id="customerPhone" required inputmode="tel" placeholder="10-digit mobile number"></label>
+      <label>Email <span>(optional)</span><input id="customerEmail" type="email" placeholder="you@example.com"></label>
+      <label>Order type
+        <select id="orderType">
+          <option value="Pickup">Pickup from store</option>
+          <option value="Delivery">Delivery</option>
+        </select>
+      </label>
+      <label id="addressField" class="hidden">Delivery address<textarea id="customerAddress" rows="2" placeholder="Enter your delivery address"></textarea></label>
+      <label>Notes <span>(optional)</span><textarea id="orderNotes" rows="2" placeholder="Any special instructions?"></textarea></label>
+      <div class="order-methods">
+        <button class="btn btn-primary order-whatsapp" type="submit" name="method" value="whatsapp">Order on WhatsApp ↗</button>
+        <button class="btn btn-outline order-email" type="button" id="orderEmailBtn">Send by Email ✉</button>
+      </div>
+      <p class="order-disclaimer">Your order is saved to the 7Layers order dashboard first. WhatsApp opens with the order details; email can be sent through the bakery's configured email service.</p>
+    </form>
+  </div>
+</div>
+
+<div class="floating-actions" aria-label="Quick contact">
+  <a class="float-btn whatsapp" href="https://wa.me/919030333177" target="_blank" rel="noopener" aria-label="WhatsApp 7Layers">◔</a>
+  <a class="float-btn call" href="tel:+919030333177" aria-label="Call 7Layers">☎</a>
+</div>
+</body>
+</html>

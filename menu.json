@@ -1,0 +1,492 @@
+[
+  {
+    "id": "egg-puff-pack-of-3",
+    "name": "Egg Puff Pack Of 3",
+    "price": 119,
+    "category": "puff",
+    "description": "Seasoned egg wrapped in a crisp, golden pastry."
+  },
+  {
+    "id": "veg-puff-pack-of-3",
+    "name": "Veg Puff Pack Of 3",
+    "price": 119,
+    "category": "puff",
+    "description": "Golden flaky pastry filled with a flavorful mixed-vegetable filling."
+  },
+  {
+    "id": "chicken-puff-pack-of-3",
+    "name": "Chicken Puff Pack Of 3",
+    "price": 149,
+    "category": "puff",
+    "description": "Seasoned chicken wrapped in a crisp, golden-brown pastry."
+  },
+  {
+    "id": "chicken-classic-burger",
+    "name": "Chicken Classic Burger",
+    "price": 139,
+    "category": "burgers",
+    "description": "Chicken patty with lettuce, tomato, onion and toppings."
+  },
+  {
+    "id": "chicken-65-burger",
+    "name": "Chicken 65 Burger",
+    "price": 159,
+    "category": "burgers",
+    "description": "Crispy, spicy Chicken 65 patty with fresh toppings."
+  },
+  {
+    "id": "veg-burger",
+    "name": "Veg Burger",
+    "price": 119,
+    "category": "burgers",
+    "description": "A tasty plant-based burger with fresh toppings."
+  },
+  {
+    "id": "masala-french-fries",
+    "name": "Masala French Fries",
+    "price": 119,
+    "category": "burgers",
+    "description": ""
+  },
+  {
+    "id": "peri-peri-french-fries",
+    "name": "Peri Peri French Fries",
+    "price": 139,
+    "category": "burgers",
+    "description": ""
+  },
+  {
+    "id": "salted-french-fries",
+    "name": "Salted French Fries",
+    "price": 99,
+    "category": "burgers",
+    "description": ""
+  },
+  {
+    "id": "chicken-pizza-8-inches",
+    "name": "Chicken Pizza 8 Inches",
+    "price": 259,
+    "category": "pizza",
+    "description": ""
+  },
+  {
+    "id": "chicken-65-pizza-8-inches",
+    "name": "Chicken 65 Pizza 8 Inches",
+    "price": 279,
+    "category": "pizza",
+    "description": "Chicken 65, fiery spices, tangy sauce, gooey cheese and crispy crust."
+  },
+  {
+    "id": "veg-pizza-8-inches",
+    "name": "Veg Pizza 8 Inches",
+    "price": 249,
+    "category": "pizza",
+    "description": "Crispy crust, sauce, gooey cheese and fresh vegetables."
+  },
+  {
+    "id": "shawarma",
+    "name": "Shawarma",
+    "price": 139,
+    "category": "shawarma",
+    "description": ""
+  },
+  {
+    "id": "shawarma-special",
+    "name": "Shawarma Special",
+    "price": 159,
+    "category": "shawarma",
+    "description": ""
+  },
+  {
+    "id": "chicken-65-rumali-roll",
+    "name": "Chicken 65 Rumali Roll",
+    "price": 159,
+    "category": "rolls",
+    "description": ""
+  },
+  {
+    "id": "chicken-rumali-roll",
+    "name": "Chicken Rumali Roll",
+    "price": 139,
+    "category": "rolls",
+    "description": ""
+  },
+  {
+    "id": "chicken-samoli-roll",
+    "name": "Chicken Samoli Roll",
+    "price": 139,
+    "category": "rolls",
+    "description": "Rolled flatbread filled with seasoned chicken, vegetables and sauces."
+  },
+  {
+    "id": "chicken-65-samoli-roll",
+    "name": "Chicken 65 Samoli Roll",
+    "price": 159,
+    "category": "rolls",
+    "description": "Spicy Chicken 65, fresh vegetables and sauces in flatbread."
+  },
+  {
+    "id": "veg-samoli-roll",
+    "name": "Veg Samoli Roll",
+    "price": 119,
+    "category": "rolls",
+    "description": "Flaky pastry-style roll filled with spiced vegetables."
+  },
+  {
+    "id": "chicken-manchuriya-noodles",
+    "name": "Chicken Manchuriya Noodles",
+    "price": 179,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "chicken-mix-noodles",
+    "name": "Chicken Mix Noodles",
+    "price": 199,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "chicken-noodles",
+    "name": "Chicken Noodles",
+    "price": 159,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "chicken-shezwan-noodles",
+    "name": "Chicken Shezwan Noodles",
+    "price": 179,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "egg-noodles",
+    "name": "Egg Noodles",
+    "price": 149,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "manchuriya-noodles",
+    "name": "Manchuriya Noodles",
+    "price": 149,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "veg-noodles",
+    "name": "Veg Noodles",
+    "price": 139,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "veg-shezwan-noodles",
+    "name": "Veg Shezwan Noodles",
+    "price": 149,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "chicken-fried-rice",
+    "name": "Chicken Fried Rice",
+    "price": 159,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "chicken-manchuriya-fried-rice",
+    "name": "Chicken Manchuriya Fried Rice",
+    "price": 179,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "chicken-mix-fried-rice",
+    "name": "Chicken Mix Fried Rice",
+    "price": 199,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "chicken-shezwan-fried-rice",
+    "name": "Chicken Shezwan Fried Rice",
+    "price": 179,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "egg-fried-rice",
+    "name": "Egg Fried Rice",
+    "price": 149,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "veg-fried-rice",
+    "name": "Veg Fried Rice",
+    "price": 139,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "veg-mnchuriya-fried-rice",
+    "name": "Veg Mnchuriya Fried Rice",
+    "price": 149,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "veg-shezwan-fried-rice",
+    "name": "Veg Shezwan Fried Rice",
+    "price": 149,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "chicken-manchuriya",
+    "name": "Chicken Manchuriya",
+    "price": 269,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "chicken-manchuriya-gravy",
+    "name": "Chicken Manchuriya Gravy",
+    "price": 279,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "veg-manchuriya",
+    "name": "Veg Manchuriya",
+    "price": 139,
+    "category": "chinese",
+    "description": ""
+  },
+  {
+    "id": "dilkhush",
+    "name": "Dilkhush",
+    "price": 29,
+    "category": "bakery",
+    "description": "Soft cream cake topped with tutti frutti and coconut."
+  },
+  {
+    "id": "cream-bun",
+    "name": "Cream Bun",
+    "price": 29,
+    "category": "bakery",
+    "description": "Soft bun stuffed with sweet, creamy filling."
+  },
+  {
+    "id": "dilpasand",
+    "name": "Dilpasand",
+    "price": 29,
+    "category": "bakery",
+    "description": "Soft sponge layered with sweet cream and fruity filling, topped with tutti frutti and coconut."
+  },
+  {
+    "id": "bread",
+    "name": "Bread",
+    "price": 59,
+    "category": "bakery",
+    "description": ""
+  },
+  {
+    "id": "shirmal",
+    "name": "Shirmal",
+    "price": 29,
+    "category": "bakery",
+    "description": ""
+  },
+  {
+    "id": "fine",
+    "name": "Fine",
+    "price": 19,
+    "category": "bakery",
+    "description": ""
+  },
+  {
+    "id": "plain-toast-250-grams",
+    "name": "Plain Toast 250 Grams",
+    "price": 69,
+    "category": "bakery",
+    "description": ""
+  },
+  {
+    "id": "fruit-toast-250-grams",
+    "name": "Fruit Toast 250 Grams",
+    "price": 69,
+    "category": "bakery",
+    "description": ""
+  },
+  {
+    "id": "small-bun",
+    "name": "Small Bun",
+    "price": 17,
+    "category": "bakery",
+    "description": ""
+  },
+  {
+    "id": "pineapple-pastry",
+    "name": "Pineapple Pastry",
+    "price": 39,
+    "category": "cakes",
+    "description": "Moist cake layers with tangy pineapple flavour and creamy topping."
+  },
+  {
+    "id": "butterscotch-pastry",
+    "name": "Butterscotch Pastry",
+    "price": 49,
+    "category": "cakes",
+    "description": "Rich cake layers with classic butterscotch flavour."
+  },
+  {
+    "id": "strawberry-pastry",
+    "name": "Strawberry Pastry",
+    "price": 44,
+    "category": "cakes",
+    "description": "Vanilla sponge with strawberry cream and glaze."
+  },
+  {
+    "id": "black-forest-pastry",
+    "name": "Black Forest Pastry",
+    "price": 69,
+    "category": "cakes",
+    "description": "Chocolate cake, whipped cream and cherries."
+  },
+  {
+    "id": "chocolate-pastry",
+    "name": "Chocolate Pastry",
+    "price": 79,
+    "category": "cakes",
+    "description": "Chocolate sponge, rich chocolate cream and glaze."
+  },
+  {
+    "id": "pineapple-cake",
+    "name": "Pineapple Cake",
+    "price": 299,
+    "category": "cakes",
+    "description": "Refreshing pineapple cake with creamy frosting."
+  },
+  {
+    "id": "butterscotch-cake",
+    "name": "Butterscotch Cake",
+    "price": 399,
+    "category": "cakes",
+    "description": "Decadent cake with butterscotch flavour and frosting."
+  },
+  {
+    "id": "strawberry-cake",
+    "name": "Strawberry Cake",
+    "price": 349,
+    "category": "cakes",
+    "description": "Vanilla sponge with smooth strawberry cream and topping."
+  },
+  {
+    "id": "black-forest-cake",
+    "name": "Black Forest Cake",
+    "price": 499,
+    "category": "cakes",
+    "description": "Chocolate sponge with cherries, whipped cream and chocolate shavings."
+  },
+  {
+    "id": "chocolate-chocochips-cake",
+    "name": "Chocolate Chocochips Cake",
+    "price": 549,
+    "category": "cakes",
+    "description": "Chocolate sponge layered with rich chocolate cream and choco chips."
+  },
+  {
+    "id": "salt-biscuit",
+    "name": "Salt Biscuit",
+    "price": 129,
+    "category": "biscuits",
+    "description": "Crispy, savoury biscuits with a satisfying crunch."
+  },
+  {
+    "id": "7-layer-osmania-biscuit",
+    "name": "7 Layer Osmania Biscuit",
+    "price": 139,
+    "category": "biscuits",
+    "description": "Traditional Hyderabad-style buttery biscuit with a delicate saffron note."
+  },
+  {
+    "id": "moon-biscuit",
+    "name": "Moon Biscuit",
+    "price": 139,
+    "category": "biscuits",
+    "description": "Golden, buttery biscuits with a flaky and tender texture."
+  },
+  {
+    "id": "fruit-biscuit",
+    "name": "Fruit Biscuit",
+    "price": 149,
+    "category": "biscuits",
+    "description": "Buttery biscuits with dried fruit for a sweet, fruity bite."
+  },
+  {
+    "id": "coconut-microm",
+    "name": "Coconut Microm",
+    "price": 149,
+    "category": "biscuits",
+    "description": "Coconut and cherry macaroon-style biscuits with a satisfying crunch."
+  },
+  {
+    "id": "chicken-65-dry",
+    "name": "Chicken 65 Dry",
+    "price": 269,
+    "category": "starters",
+    "description": "Spicy, tangy South Indian-style fried chicken bites."
+  },
+  {
+    "id": "chicken-65-gravy",
+    "name": "Chicken 65 Gravy",
+    "price": 279,
+    "category": "starters",
+    "description": ""
+  },
+  {
+    "id": "chilli-chicken",
+    "name": "Chilli Chicken",
+    "price": 279,
+    "category": "starters",
+    "description": ""
+  },
+  {
+    "id": "fried-leg-piece",
+    "name": "Fried Leg Piece",
+    "price": 239,
+    "category": "starters",
+    "description": ""
+  },
+  {
+    "id": "fried-wings",
+    "name": "Fried Wings",
+    "price": 239,
+    "category": "starters",
+    "description": ""
+  },
+  {
+    "id": "chicken-65-grilled-sandwich",
+    "name": "Chicken 65 Grilled Sandwich",
+    "price": 159,
+    "category": "sandwich",
+    "description": "Chicken 65, fresh vegetables and seasonings on toasted bread."
+  },
+  {
+    "id": "chicken-grilled-sandwich",
+    "name": "Chicken Grilled Sandwich",
+    "price": 139,
+    "category": "sandwich",
+    "description": "Tender chicken, fresh vegetables and seasonings on toasted bread."
+  },
+  {
+    "id": "veg-grilled-sandwich",
+    "name": "Veg Grilled Sandwich",
+    "price": 119,
+    "category": "sandwich",
+    "description": "Fresh vegetables, seasonings and melted cheese on toasted bread."
+  }
+]

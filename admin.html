@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>7Layers — Bakery Performance Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --espresso:#2f1b14; --espresso-2:#41261c; --gold:#c79a3b; --gold-soft:#efe1b7;
+ --cream:#f7f1df; --paper:#fffdf7; --line:#e6dac2; --text:#30231d;
+ --muted:#806f63; --terracotta:#a6534b; --sage:#647b66; --blue:#58748b;
+ --shadow:0 12px 35px rgba(47,27,20,.08)
+}
+*{box-sizing:border-box} body{margin:0;background:var(--cream);color:var(--text);font-family:"DM Sans",sans-serif}
+button,select{font:inherit}.app{min-height:100vh;display:grid;grid-template-columns:235px 1fr}
+.sidebar{background:var(--espresso);color:#fff;padding:28px 18px;position:sticky;top:0;height:100vh}
+.brand{display:flex;gap:12px;align-items:center;padding:6px 8px 28px;border-bottom:1px solid rgba(255,255,255,.13)}
+.logo-mark{width:42px;height:42px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold);font:700 18px "Playfair Display"}
+.brand strong{font:700 18px "Playfair Display";display:block}.brand small{font-size:8px;letter-spacing:1.8px;opacity:.65}
+.nav{padding-top:22px;display:grid;gap:6px}.nav button{border:0;background:transparent;color:#d8c9bd;text-align:left;padding:12px 13px;border-radius:10px;cursor:pointer;font-size:12px}
+.nav button.active,.nav button:hover{background:#fff;color:var(--espresso)}
+.sidebar-foot{position:absolute;bottom:24px;left:26px;right:26px;font-size:9px;color:#bca99b;line-height:1.5}
+.main{min-width:0}.topbar{height:72px;background:rgba(255,253,247,.92);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}
+.title{font:600 24px "Playfair Display";color:var(--espresso)}.sub{font-size:10px;color:var(--muted);margin-top:2px}
+.range{display:flex;align-items:center;gap:8px}.range select,.refresh{border:1px solid var(--line);background:var(--paper);border-radius:9px;padding:9px 12px;color:var(--espresso);cursor:pointer}.refresh{background:var(--espresso);color:#fff;border-color:var(--espresso)}
+.content{padding:28px 32px 42px;max-width:1500px;margin:auto}.hero-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:18px}.hero-title h1{font:600 30px "Playfair Display";margin:0;color:var(--espresso)}.hero-title p{margin:5px 0 0;color:var(--muted);font-size:11px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}.card,.panel{background:var(--paper);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)}
+.card{padding:17px}.card-head{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase}.icon{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:var(--gold-soft);color:var(--gold);font-weight:800}.value{font:700 26px "Playfair Display";color:var(--espresso);margin-top:10px}.hint{font-size:9px;color:var(--sage);font-weight:700;margin-top:3px}
+.grid{display:grid;grid-template-columns:1.55fr 1fr 1fr;gap:15px}.wide{grid-column:span 2}.panel{padding:18px;min-height:260px}.panel-head{display:flex;justify-content:space-between;align-items:start;margin-bottom:12px}.panel-title{font:600 17px "Playfair Display";color:var(--espresso)}.panel-sub{font-size:9px;color:var(--muted);margin-top:3px}
+.chart-wrap{height:205px;position:relative}.chart{height:100%;display:flex;align-items:flex-end;gap:7px;padding:12px 2px 20px;border-bottom:1px solid var(--line);overflow-x:auto}.bar-wrap{height:100%;min-width:31px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px}.bar{width:24px;background:var(--gold);border-radius:5px 5px 0 0;min-height:2px}.bar-label{font-size:7px;color:var(--muted)}.bar-value{font-size:7px;color:var(--espresso);font-weight:700}
+.donut-area{display:flex;align-items:center;justify-content:center;gap:18px;height:200px}.donut{width:142px;height:142px;border-radius:50%;background:conic-gradient(var(--gold) 0 40%,var(--terracotta) 40% 67%,var(--blue) 67% 84%,var(--sage) 84% 100%);position:relative}.donut:after{content:"";position:absolute;inset:34px;background:var(--paper);border-radius:50%}.legend{display:grid;gap:8px}.legend-row{font-size:9px;color:var(--muted);display:flex;align-items:center;gap:7px}.dot{width:8px;height:8px;border-radius:50%}.empty-chart{height:100%;display:grid;place-items:center;color:var(--muted);font-size:11px}
+.top-products{display:grid;gap:8px}.product-row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:8px 0;border-bottom:1px solid #eee5d7}.product-row:last-child{border:0}.product-name{font-size:10px;font-weight:700}.product-count{font-size:10px;color:var(--muted)}.product-bar{height:4px;background:var(--gold-soft);border-radius:99px;margin-top:5px;overflow:hidden}.product-bar i{display:block;height:100%;background:var(--gold);border-radius:99px}
+.transactions{max-height:275px;overflow:auto}.tx{display:grid;grid-template-columns:1fr auto;gap:8px;padding:10px 0;border-bottom:1px solid #eee5d7}.tx strong{font-size:10px}.tx small{display:block;color:var(--muted);font-size:8px;margin-top:3px}.tx b{font-size:11px;color:var(--espresso)}
+.peak{display:flex;align-items:end;gap:9px;height:190px;padding-top:10px}.peak-col{flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:end;gap:5px}.peak-bar{width:100%;max-width:38px;background:var(--blue);border-radius:5px 5px 0 0;min-height:2px}.peak-col span{font-size:7px;color:var(--muted);text-align:center}.peak-col b{font-size:7px}
+.table-panel{margin-top:15px}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}.filters button{border:1px solid var(--line);background:var(--paper);border-radius:99px;padding:7px 11px;font-size:9px;cursor:pointer}.filters button.active{background:var(--espresso);color:#fff;border-color:var(--espresso)}
+.table-scroll{overflow:auto}table{width:100%;border-collapse:collapse;min-width:850px}th,td{text-align:left;padding:11px 8px;border-bottom:1px solid #eee5d7;font-size:10px;vertical-align:top}th{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.status{border:1px solid var(--line);background:var(--paper);border-radius:99px;padding:5px 8px;font-size:9px}.status:focus{outline:2px solid var(--gold-soft)}
+.no-data{color:var(--muted);font-size:10px;padding:30px;text-align:center}
+@media(max-width:1100px){.app{grid-template-columns:75px 1fr}.sidebar{padding:20px 10px}.brand div:not(.logo-mark),.nav span,.sidebar-foot{display:none}.brand{border:0;justify-content:center}.nav button{text-align:center}.cards{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr 1fr}.wide{grid-column:span 2}}
+@media(max-width:720px){.app{display:block}.sidebar{height:auto;position:static;padding:12px 15px}.brand{display:flex;justify-content:flex-start;padding:4px 5px 12px}.brand div:not(.logo-mark){display:block}.nav{display:flex;overflow:auto;padding-top:8px}.nav button{white-space:nowrap}.sidebar-foot{display:none}.topbar{height:auto;padding:13px 16px}.content{padding:20px 15px}.hero-title{display:block}.cards{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.wide{grid-column:span 1}}
+@media(max-width:470px){.cards{grid-template-columns:1fr}.range select{max-width:120px}.title{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="logo-mark">7L</div><div><strong>7LAYERS</strong><small>BAKERY & SNACKS</small></div></div>
+  <nav class="nav">
+    <button class="active" onclick="scrollToSection('overview',this)">▦ <span>Overview</span></button>
+    <button onclick="scrollToSection('orders',this)">▤ <span>Orders</span></button>
+    <button onclick="scrollToSection('products',this)">◈ <span>Products</span></button>
+    <button onclick="scrollToSection('sales',this)">◷ <span>Sales</span></button>
+  </nav>
+  <div class="sidebar-foot">7Layers Bakery & Snacks<br>Owner Dashboard</div>
+</aside>
+<main class="main">
+<header class="topbar">
+  <div><div class="title">Bakery Performance & Sales</div><div class="sub" id="rangeText">This month</div></div>
+  <div class="range"><select id="range"><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="month">This month</option></select><button class="refresh" id="refresh">Refresh</button></div>
+</header>
+<div class="content" id="overview">
+  <div class="hero-title"><div><h1>Good business, beautifully measured.</h1><p>Track orders, revenue, popular products and daily performance from one place.</p></div></div>
+  <section class="cards">
+    <div class="card"><div class="card-head">Total Sales <div class="icon">₹</div></div><div class="value" id="monthRevenue">₹0</div><div class="hint" id="salesHint">Revenue this period</div></div>
+    <div class="card"><div class="card-head">Total Orders <div class="icon">▤</div></div><div class="value" id="monthOrders">0</div><div class="hint" id="ordersHint">Orders this period</div></div>
+    <div class="card"><div class="card-head">Average Order <div class="icon">↗</div></div><div class="value" id="average">₹0</div><div class="hint">Average order value</div></div>
+    <div class="card"><div class="card-head">Today's Sales <div class="icon">★</div></div><div class="value" id="todayRevenue">₹0</div><div class="hint" id="todayOrders">0 orders today</div></div>
+  </section>
+  <div class="grid" id="sales">
+    <section class="panel wide"><div class="panel-head"><div><div class="panel-title">Daily Sales Trend</div><div class="panel-sub">Revenue by day</div></div></div><div class="chart-wrap"><div class="chart" id="dailyChart"></div></div></section>
+    <section class="panel"><div class="panel-head"><div><div class="panel-title">Sales by Category</div><div class="panel-sub">Where revenue comes from</div></div></div><div class="donut-area"><div class="donut" id="donut"></div><div class="legend" id="legend"></div></div></section>
+    <section class="panel" id="products"><div class="panel-head"><div><div class="panel-title">Top Selling Products</div><div class="panel-sub">By units sold</div></div></div><div class="top-products" id="topProducts"></div></section>
+    <section class="panel wide"><div class="panel-head"><div><div class="panel-title">Recent Transactions</div><div class="panel-sub">Latest customer orders</div></div></div><div class="transactions" id="transactions"></div></section>
+    <section class="panel"><div class="panel-head"><div><div class="panel-title">Peak Sales Hours</div><div class="panel-sub">Orders by time</div></div></div><div class="peak" id="peak"></div></section>
+  </div>
+  <section class="panel table-panel" id="orders"><div class="panel-head"><div><div class="panel-title">Orders</div><div class="panel-sub">Manage incoming customer orders</div></div></div>
+    <div class="filters" id="filters"><button class="active" data-filter="all">All</button><button data-filter="pending">Pending</button><button data-filter="confirmed">Confirmed</button><button data-filter="preparing">Preparing</button><button data-filter="ready">Ready</button><button data-filter="completed">Completed</button><button data-filter="cancelled">Cancelled</button></div>
+    <div class="table-scroll"><table><thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Date</th><th>Status</th></tr></thead><tbody id="ordersBody"></tbody></table></div>
+  </section>
+</div>
+</main>
+</div>
+<script>
+let allOrders=[],filter="all";
+const money=n=>"₹"+Number(n||0).toLocaleString("en-IN");
+const colors=["#c79a3b","#a6534b","#58748b","#647b66","#8a6f61","#9c9b6a"];
+async function api(url,opt={}){const r=await fetch(url,opt);if(!r.ok)throw new Error(await r.text());return r.json()}
+function setText(id,v){const e=document.getElementById(id);if(e)e.textContent=v}
+function drawDaily(data){
+ const el=document.getElementById("dailyChart"), entries=Object.entries(data||{}), max=Math.max(1,...entries.map(x=>x[1]));
+ if(!entries.length){el.innerHTML='<div class="empty-chart">No sales data for this period.</div>';return}
+ el.innerHTML=entries.map(([d,v])=>`<div class="bar-wrap"><div class="bar-value">${money(v)}</div><div class="bar" style="height:${Math.max(3,v/max*135)}px"></div><div class="bar-label">${d.slice(8)}</div></div>`).join("");
+}
+function drawCategory(data){
+ const entries=Object.entries(data||{}), total=entries.reduce((s,x)=>s+x[1],0), el=document.getElementById("legend"),donut=document.getElementById("donut");
+ if(!entries.length){el.innerHTML='<span class="no-data">No category sales yet.</span>';donut.style.background="#e6dac2";return}
+ let acc=0,parts=[];
+ entries.forEach(([,v],i)=>{const p=v/total*100;parts.push(`${colors[i%colors.length]} ${acc}% ${acc+p}%`);acc+=p});
+ donut.style.background=`conic-gradient(${parts.join(",")})`;
+ el.innerHTML=entries.map(([k,v],i)=>`<div class="legend-row"><i class="dot" style="background:${colors[i%colors.length]}"></i>${k} <b>${Math.round(v/total*100)}%</b></div>`).join("");
+}
+function drawProducts(data){
+ const el=document.getElementById("topProducts"), entries=Object.entries(data||{}).sort((a,b)=>b[1]-a[1]).slice(0,5);
+ if(!entries.length){el.innerHTML='<div class="no-data">No product sales yet.</div>';return}
+ const max=entries[0][1];el.innerHTML=entries.map(([k,v])=>`<div class="product-row"><div><div class="product-name">${k}</div><div class="product-bar"><i style="width:${v/max*100}%"></i></div></div><div class="product-count">${v} sold</div></div>`).join("");
+}
+function drawTransactions(orders){
+ const el=document.getElementById("transactions"), rows=orders.slice(0,5);
+ el.innerHTML=rows.length?rows.map(o=>`<div class="tx"><div><strong>${o.orderNumber}</strong><small>${o.customerName} • ${o.items.reduce((s,i)=>s+i.qty,0)} items • ${o.status}</small></div><b>${money(o.total)}</b></div>`).join(""):'<div class="no-data">No orders yet.</div>';
+}
+function drawPeak(data){
+ const el=document.getElementById("peak"), entries=Object.entries(data||{}), max=Math.max(1,...entries.map(x=>x[1]));
+ const slots=["9 AM","11 AM","1 PM","3 PM","5 PM","7 PM","9 PM"];
+ el.innerHTML=slots.map((s,i)=>{const v=data?.[s]||0;return `<div class="peak-col"><b>${v}</b><div class="peak-bar" style="height:${Math.max(2,v/max*130)}px"></div><span>${s}</span></div>`}).join("");
+}
+function renderOrders(){
+ const body=document.getElementById("ordersBody"),rows=allOrders.filter(o=>filter==="all"||o.status===filter);
+ body.innerHTML=rows.length?rows.map(o=>{
+  const items=o.items.map(i=>`${i.name} × ${i.qty}`).join("<br>");
+  const opts=["pending","confirmed","preparing","ready","completed","cancelled"].map(s=>`<option value="${s}" ${s===o.status?"selected":""}>${s}</option>`).join("");
+  return `<tr><td><b>${o.orderNumber}</b><br><small>${o.orderType}</small></td><td><b>${o.customerName}</b><br>${o.customerPhone}<br>${o.customerEmail||""}</td><td>${items}</td><td><b>${money(o.total)}</b></td><td>${new Date(o.createdAt).toLocaleString("en-IN")}</td><td><select class="status" onchange="changeStatus('${o.id}',this.value)">${opts}</select></td></tr>`;
+ }).join(""):'<tr><td colspan="6" class="no-data">No orders found.</td></tr>';
+}
+async function changeStatus(id,status){await api("/api/orders/"+id,{method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify({status})});load()}
+async function load(){
+ try{
+  const days=document.getElementById("range").value;
+  const stats=await api("/api/stats?range="+days);
+  allOrders=stats.orders||[];
+  setText("monthRevenue",money(stats.period.revenue));setText("monthOrders",stats.period.orders);
+  setText("average",money(stats.period.average));setText("todayRevenue",money(stats.today.revenue));setText("todayOrders",stats.today.orders+" orders today");
+  setText("rangeText",stats.period.label);
+  drawDaily(stats.daily);drawCategory(stats.category);drawProducts(stats.topProducts);drawTransactions(allOrders);drawPeak(stats.peakHours);renderOrders();
+ }catch(e){alert("Admin login required or server unavailable. "+e.message)}
+}
+document.getElementById("refresh").onclick=load;document.getElementById("range").onchange=load;
+document.getElementById("filters").onclick=e=>{if(!e.target.matches("button"))return;document.querySelectorAll("#filters button").forEach(b=>b.classList.remove("active"));e.target.classList.add("active");filter=e.target.dataset.filter;renderOrders()};
+function scrollToSection(id,btn){document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));btn.classList.add("active");document.getElementById(id).scrollIntoView({behavior:"smooth",block:"start"})}
+load();
+</script>
+</body></html>
